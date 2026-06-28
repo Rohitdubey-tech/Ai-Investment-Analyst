@@ -1,7 +1,5 @@
 # AI Investment Research Agent
 
-# AI Investment Research Agent
-
 ## Overview
 This is a full-stack Investment Research Agent built for the AI Product Development Engineer (Intern) assignment. The application takes a company name as input and leverages a Large Language Model to perform a simulated financial analysis, returning a definitive "INVEST" or "PASS" decision alongside structured reasoning and sources.
 
