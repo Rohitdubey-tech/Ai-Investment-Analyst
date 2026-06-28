@@ -11,7 +11,17 @@ I decided to build this using a decoupled architecture to ensure clear separatio
 *   **Backend (`/backend`):** A lightweight Node.js/Express server.
 *   **AI Engine (LangChain):** The backend utilizes `@langchain/google-genai` to communicate with `gemini-2.0-flash`. I implemented LangChain's `.withStructuredOutput()` to guarantee the LLM returns a strictly typed JSON object, preventing frontend crashes caused by unpredictable text generation.
 
-> **Note on API Quotas:** During development, I noticed free-tier Gemini API keys frequently hit `429 Quota Exceeded` errors. To ensure the application remains robust and demonstrable for reviewers, I implemented a fallback mechanism in the backend. If the API rate limits, it returns a simulated response structure so the UI can still be evaluated.
+> **Note on API Quotas:** During development, I noticed free-tier Gemini API keys frequently hit `429 Quota Exceeded` errors. To ensure the application remains robust and demonstrable for reviewers, I implemented a fallback mechanism in the backend. If the API rate limits, it returns a simulated response structure so the UI can still be evaluated. *(Note: I have since updated the backend to use Groq API for blazing-fast live LLM inference!)*
+
+## Screenshots
+
+Here is how the beautiful, glassmorphism UI looks in action:
+
+**Empty State:**
+![App Empty State](./screenshots/empty-state.png)
+
+**Live AI Research Result (Reliance Industries):**
+![Live Result](./screenshots/live-result.png)
 
 ## How to run it
 
